@@ -16,10 +16,32 @@
 \maketitle
 \newpage
 \section{Introduction}
-At some point in most science courses you will come across population growth models and to understand them and their importance, it all starts with the calculus behind each equation. In applied mathematics, the change of quantities over time, like population, is represented by differential equations. Population growth models are extremely important in different branches of biology. By expressing the rate of change in animal populations, there can be more in-depth research done on how those animals evolve under different environmental conditions and resource availability.
-There have been multiple models proposed to describe rate of change. Some big examples is the linear growth model which has a constant rate of increase over time and the exponential growth model which assumes the current population size is proportional to the rate of growth. There is also the logistic population growth model which has an extra added component. This model incorporates the carrying capacity, which is the maximum population size an environment can support. This project will explore linear, exponential and logistic growth models and aims to clarify when each model is used and when its assumptions become unrealistic.
+At some point in most science courses, you will come across population growth models, and to understand them and their importance, it all starts with the calculus behind each equation. In applied mathematics, the change of quantities over time, like population, is represented by differential equations. Population growth models are extremely important in different branches of biology. For example, expressing the rate of change in animal populations can help with more in-depth research done on how those animals evolve under different environmental conditions and resource availability (Khan Academy).
+There have been multiple models proposed to describe the rate of change. Some big examples are the linear growth model, which has a constant rate of increase over time, and the exponential growth model, which assumes the current population size is proportional to the rate of growth. There is also the logistic population growth model, which has an extra added component. This model incorporates the carrying capacity, which is the maximum population size an environment can support. This project will explore linear, exponential, and logistic growth models and aims to clarify when each model is used and when its assumptions become unrealistic.
 \section{Methods}
-\subsection{Linear Growth Model}
+To understand each model, we start by looking at the general equation for all the types of models. The population growth rate is the change in numbers of individuals in a population over time (Khan Academy). 
+\begin{equation}
+    \centering
+     \frac{\mathrm{d}N}{\mathrm{d}x} = rN
+\end{equation}
+This equation is the basis for linear, exponential, and logistic growth models. You rarely use this one due to the lack of components that the equation requires.
+In the  equation, dN/dT is the rate of growth the population is experiencing. N is the population size, T is time and r is the per capita rate of increase (number of deaths subtracted from the number of births).
+
 \subsection{Exponential Growth Model}
+Exponential growth shows that population increases faster the more time passes (Chen, 2025). This creates a J-shaped curve on a graph. Many different populations can be represented using an exponential growth model, like a rapidly growing population of animals, which we often see in small rodents, or we also use exponential growth when modeling something like bacteria being grown in a lab.
+\begin{equation}
+    \centering
+     \frac{\mathrm{d}N}{\mathrm{d}x} = rmaxN
+\end{equation}
+As you can see, this equation is basically the same as the general equation for the population growth rate. There is a small difference which is r{max}, which represents the maximum possible growth rate a population can achieve when resources are unlimited. 
+
+\begin{figure}[H]
+
+    \centering
+    \includegraphics[width=0.37\linewidth]{exponential growth.png}
+    \caption{Graph 1:Exponential Growth Graph}
+
+\end{figure}
+\subsection{Linear Growth Model}
 \subsection{Logistic Growth Model}
 \end{document}
