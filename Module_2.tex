@@ -41,6 +41,36 @@ Exponential growth assumes there are unlimited resources, no environmental const
 N(t) = N_0 e^{r_{\max} t}
 \end{equation}
 This is the explicit solution that shows that population size grows proportionally to an exponential function of time. This is how you would find the actual population size at time t.
+\subsection{Linear Growth Model}
+A linear exponential growth model ensures what exponential cannot; it offers predictability and stability (Statsig, 2024). Unlike exponential growth where the rate of increase depends on the population size, linear growth assumes that the population grows by the same amount in each unit of time (Libretexts).
+\begin{equation}
+\frac{\mathrm{d}N}{\mathrm{d}t} = c
+\end{equation}
+The differential equation for this growth model is very straight forward. It simply states that the rate of change of the population is constant, where c is a fixed growth rate. Solving the differential equations gives us the explicit solution:
+\begin{equation}
+N(t) = N_0 + ct,
+\end{equation}
+In this equation the N$x_0$ represents the initial population size and it can be used find the population size at any time, t. 
+
+Linear growths increase in population and remain steady and easily predicted, unlike exponential growth that accelerates over time. 
+\subsection{Logistic Growth Model}
+Logistic growth is the final model where the growth slows as the population size increases. It is the only model that uses the environment and makes sure to account for the limitations faced. When sources become scarce, competition increases between the populations, and the growth rate begins to decrease. This increase-then-decrease growth pattern produces an S-shaped curve when graphed over time.
+\begin{equation}
+\frac{\mathrm{d}N}{\mathrm{d}t} = rN\left(1 - \frac{N}{K}\right)
+\end{equation}
+As shown in this equation, it has a lot more elements then the differential equation for exponential and linear growth. This equation depends on population size N like the other two models but this time there is an added K, which represents the carrying capacity. The carrying capacity is the maximum population size that the environment can sustain. In the equation there is also an r, representing the intrinsic growth rate just like in exponential growth. When the population size (N) is small compared to the carrying capacity (K), the term 1 - N/K is close to 1, causing the population to grow almost exponentially (Khan). But at the population size (N) approaches carrying capacity (K), the growth rate decreases and eventually becomes 0.
+When solved, this differential equation gives the explicit equation: 
+\begin{equation}
+N(t) = \frac{K}{1 + Ae^{-rt}},
+\end{equation}
+Here A is a constant determined by the initial population size. This formula can be used to find the population size at any time t, which will gradually approach the carrying capacity, K.
+\newline
+\newline
+\textbf{Carrying Capacity:}
+Carrying capacity is unique to the logistic growth model and is very beneficial to get a more accurate read on populations. Any type of resource important to a species and their survival can act as a limit. Limiting any highly valuable resources like food or water can lead to competition and a decline in the population of the species (Khan).
+
+\section{Results}
+\subsection{Exponential Growth Graph}
 \begin{figure}[H]
 
     \centering
@@ -49,27 +79,24 @@ This is the explicit solution that shows that population size grows proportional
 
 \end{figure}
 As shown in graph 1, there is accelerating growth leading to a strong J-shaped curve in the population trajectory. This is due to the growth rate being proportional to the current population size. We can also observe from this graph that long-term behavior, or as t goes to infinity, the exponential solution grows without bound, which is very unrealistic in nature.
-
+\subsubsection{Advantages and Limitations of Exponential Growth Models}
 Exponential growth models do have their limitations, but they are useful when analyzing fast-growing animal populations, the spread of diseases, and growing bacteria (Chen, 2025). It's great for providing reasonably accurate approximations over short time intervals or in environments where resources are only temporarily abundant. 
-\subsection{Linear Growth Model}
-A linear exponential growth model ensures what exponential cannot; it offers predictability and stability (Statsig, 2024). Unlike exponential growth where the rate of increase depends on the population size, linear growth assumes that the population grows by the same amount in each unit of time (Libretexts).
-\begin{equation}
-\frac{\mathrm{d}N}{\mathrm{d}t} = c
-\end{equation}
-The differential equation for this growth model is very straight forward. it simpily states that the rate of change of the population is constant, where c is a fixed growth rate. Solving the differential equations gives us the explicit solution:
-\begin{equation}
-N(t) = N_0 + ct,
-\end{equation}
-In this equation the N$x_0$ represents the initial population size and it can be used find the population size at any time, t. 
-
-Linear growths increase in population and remain steady and easily predicted, unlike exponential growth that accelerates over time. This model is most useful for short-term projections and initial growth analysis due to its strong assumptions (Pearson). It assumes that the population increases  by the same unit of time regardless of how large the population is. This model also says that outside conditions affecting growth remain constant. This can only be accurate under controlled laboratory experiments, not in the wild like animal populations.
+\subsection{Linear Growth Graph}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\linewidth]{linear.png}
     \caption{Linear Population Growth}
 \end{figure}
 As shown in figure 2, similarly to exponential growth, as t goes to infinity the linear solution grows without bound when c is greater than 0. Since the model does not take into account all the environmental limitations, it's most appropriate in short-term approximations.
-\subsection{Logistic Growth Model}
-
-\section{Results}
+\subsubsection{Advantages and Limitations of Linear Exponential Growth Models}
+This model is most useful for short-term projections and initial growth analysis due to its strong assumptions (Pearson). It assumes that the population increases  by the same unit of time regardless of how large the population is. This model also says that outside conditions affecting growth remain constant. This can only be accurate under controlled laboratory experiments, not in the wild like animal populations.
+\subsection{Logistic Growth Graph}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{logistic.png}
+    \caption{Logistic Growth Model}
+\end{figure}
+As t approaches infinity, the logistic solution approaches K. This means that the population eventually stabilizes instead of growing exponentially. This allows for better long-term studies on biological populations
+\subsubsection{Advantages and Limitations of Logistic Exponential Growth}
+The biggest advantage for the logistic model is the incorporation of a carrying capacity K. This is the only model that acknowledges any environmental resources, which makes it much more reasonable and realistic for long-term biological populations. There are still assumptions on the model; for example, it assumes that carrying capacity is constant and does not account for migration, seasonal changes, etc.
 \end{document}
