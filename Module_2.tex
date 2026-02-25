@@ -44,14 +44,32 @@ This is the explicit solution that shows that population size grows proportional
 \begin{figure}[H]
 
     \centering
-    \includegraphics[width=0.35\linewidth]{exponential growth.png}
-    \caption{Graph 1: Exponential Growth Graph}
+    \includegraphics[width=0.4\linewidth]{exponential growth.png}
+    \caption{Exponential Growth Graph}
 
 \end{figure}
 As shown in graph 1, there is accelerating growth leading to a strong J-shaped curve in the population trajectory. This is due to the growth rate being proportional to the current population size. We can also observe from this graph that long-term behavior, or as t goes to infinity, the exponential solution grows without bound, which is very unrealistic in nature.
 
 Exponential growth models do have their limitations, but they are useful when analyzing fast-growing animal populations, the spread of diseases, and growing bacteria (Chen, 2025). It's great for providing reasonably accurate approximations over short time intervals or in environments where resources are only temporarily abundant. 
 \subsection{Linear Growth Model}
+A linear exponential growth model ensures what exponential cannot; it offers predictability and stability (Statsig, 2024). Unlike exponential growth where the rate of increase depends on the population size, linear growth assumes that the population grows by the same amount in each unit of time (Libretexts).
+\begin{equation}
+\frac{\mathrm{d}N}{\mathrm{d}t} = c
+\end{equation}
+The differential equation for this growth model is very straight forward. it simpily states that the rate of change of the population is constant, where c is a fixed growth rate. Solving the differential equations gives us the explicit solution:
+\begin{equation}
+N(t) = N_0 + ct,
+\end{equation}
+In this equation the N$x_0$ represents the initial population size and it can be used find the population size at any time, t. 
 
+Linear growths increase in population and remain steady and easily predicted, unlike exponential growth that accelerates over time. This model is most useful for short-term projections and initial growth analysis due to its strong assumptions (Pearson). It assumes that the population increases  by the same unit of time regardless of how large the population is. This model also says that outside conditions affecting growth remain constant. This can only be accurate under controlled laboratory experiments, not in the wild like animal populations.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{linear.png}
+    \caption{Linear Population Growth}
+\end{figure}
+As shown in figure 2, similarly to exponential growth, as t goes to infinity the linear solution grows without bound when c is greater than 0. Since the model does not take into account all the environmental limitations, it's most appropriate in short-term approximations.
 \subsection{Logistic Growth Model}
+
+\section{Results}
 \end{document}
