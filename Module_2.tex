@@ -22,26 +22,36 @@ There have been multiple models proposed to describe the rate of change. Some bi
 To understand each model, we start by looking at the general equation for all the types of models. The population growth rate is the change in numbers of individuals in a population over time (Khan Academy). 
 \begin{equation}
     \centering
-     \frac{\mathrm{d}N}{\mathrm{d}x} = rN
+     \frac{\mathrm{d}N}{\mathrm{d}t} = rN
 \end{equation}
 This equation is the basis for linear, exponential, and logistic growth models. You rarely use this one due to the lack of components that the equation requires.
 In the  equation, dN/dT is the rate of growth the population is experiencing. N is the population size, T is time and r is the per capita rate of increase (number of deaths subtracted from the number of births).
 
 \subsection{Exponential Growth Model}
-Exponential growth shows that population increases faster the more time passes (Chen, 2025). This creates a J-shaped curve on a graph. Many different populations can be represented using an exponential growth model, like a rapidly growing population of animals, which we often see in small rodents, or we also use exponential growth when modeling something like bacteria being grown in a lab.
+Exponential growth is used when a population increases faster the more time passes (Chen, 2025). This creates a J-shaped curve on a graph. Many different populations can be represented using an exponential growth model, like a rapidly growing population of animals, which we often see in small rodents, or in the growth of bacteria cultured in laboratory conditions. 
+
 \begin{equation}
     \centering
-     \frac{\mathrm{d}N}{\mathrm{d}x} = rmaxN
+     \frac{\mathrm{d}N}{\mathrm{d}t} = r_{\max} N
 \end{equation}
-As you can see, this equation is basically the same as the general equation for the population growth rate. There is a small difference which is r{max}, which represents the maximum possible growth rate a population can achieve when resources are unlimited. 
+This differential equation describes the rate at which the population changes at any given moment. It explains how the population is changing at any given moment but to use this model there also need to be a lot of assumptions made. 
 
+Exponential growth assumes there are unlimited resources, no environmental constraints, and a constant per capita growth rate as well as no immigration or emigration. Although these assumptions make the math easier, they reduce the realism in any long-term results. The small difference between the general equation and this exponential one is the r{max}, which represents the maximum possible growth rate a population can achieve when resources are unlimited. 
+\begin{equation}
+N(t) = N_0 e^{r_{\max} t}
+\end{equation}
+This is the explicit solution that shows that population size grows proportionally to an exponential function of time. This is how you would find the actual population size at time t.
 \begin{figure}[H]
 
     \centering
-    \includegraphics[width=0.37\linewidth]{exponential growth.png}
-    \caption{Graph 1:Exponential Growth Graph}
+    \includegraphics[width=0.35\linewidth]{exponential growth.png}
+    \caption{Graph 1: Exponential Growth Graph}
 
 \end{figure}
+As shown in graph 1, there is accelerating growth leading to a strong J-shaped curve in the population trajectory. This is due to the growth rate being proportional to the current population size. We can also observe from this graph that long-term behavior, or as t goes to infinity, the exponential solution grows without bound, which is very unrealistic in nature.
+
+Exponential growth models do have their limitations, but they are useful when analyzing fast-growing animal populations, the spread of diseases, and growing bacteria (Chen, 2025). It's great for providing reasonably accurate approximations over short time intervals or in environments where resources are only temporarily abundant. 
 \subsection{Linear Growth Model}
+
 \subsection{Logistic Growth Model}
 \end{document}
