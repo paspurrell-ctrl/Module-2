@@ -1,6 +1,21 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{float}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red},
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+    stepnumber=1
+}
 \usepackage[margin=1in]{geometry}
 \usepackage{url}
 \usepackage{xurl}
@@ -65,12 +80,10 @@ Carrying capacity is unique to the logistic growth model and is very beneficial 
 
 \section{Results}
 \subsection{Exponential Growth Graph}
-\begin{figure}[H]
-
+\begin{figure}
     \centering
-    \includegraphics[width=0.4\linewidth]{exponential growth.png}
-    \caption{Exponential Growth Graph}
-
+    \includegraphics[width=0.5\linewidth]{sage Exponential.png}
+    \caption{Exponential Growth}
 \end{figure}
 As shown, there is accelerating growth leading to a strong J-shaped curve in the population. This is due to the growth rate being proportional to the current population size. We can also observe from this graph that long-term behavior, or as t goes to infinity, the exponential solution grows without bound, which is very unrealistic in nature.
 \subsubsection{Advantages and Limitations of Exponential Growth Models}
@@ -78,8 +91,8 @@ Exponential growth models do have their limitations, but they are useful when an
 \subsection{Linear Growth Graph}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\linewidth]{linear.png}
-    \caption{Linear Population Growth}
+    \includegraphics[width=0.5\linewidth]{sage linear.png}
+    \caption{Linear Growth}
 \end{figure}
 As shown in figure 2, similarly to exponential growth, as t goes to infinity the linear solution grows without bound when c is greater than 0. Since the model does not take into account all the environmental limitations, it's most appropriate in short-term approximations.
 \subsubsection{Advantages and Limitations of Linear Growth Models}
@@ -87,14 +100,89 @@ This model is most useful for short-term projections and initial growth analysis
 \subsection{Logistic Growth Graph}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{logistic.png}
-    \caption{Logistic Growth Model}
+    \includegraphics[width=0.5\linewidth]{Logistic Sage.png}
+    \caption{Logistic Growth}
 \end{figure}
 As t approaches infinity, the logistic solution approaches K. This means that the population eventually stabilizes instead of growing exponentially. This allows for better long-term studies on biological populations
 \subsubsection{Advantages and Limitations of Logistic Exponential Growth}
 The biggest advantage for the logistic model is the incorporation of a carrying capacity K. This is the only model that acknowledges any environmental resources, which makes it much more reasonable and realistic for long-term biological populations (Khan Academy). There are still assumptions on the model; for example, it assumes that carrying capacity is constant and does not account for migration, seasonal changes, etc.
 \section{Conclusion}
 In this project I studied three types of population growth models: exponential, linear, and logistic. Each of these models was compared by their equations, advantages and limitations, and long-term behavior. The exponential model assumes growth proportional to the current population, the linear model assumes a constant rate of increase and the logistic model incorporates a carrying capacity. The linear and exponential models are useful for short-term predictions because resource limitations may not yet significantly affect population growth. Results for the logistic model show that the growth slows, leading to stabilization in a population. This means that the logistic model is the most realistic out of the three for long-term biological populations. Understanding these models is essential when applying mathematical models to real-world studies.
+\newpage
+\appendix
+\section{Sage Code for Population Growth Models}
+
+\subsection{Linear Population Growth}
+
+\begin{lstlisting}[caption={Linear Growth Model}]
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Time values
+t = np.linspace(0, 20, 200)
+
+# Parameters
+P0 = 10
+m = 5
+
+# Linear model
+P = P0 + m*t
+
+plt.plot(t, P)
+plt.title("Linear Population Growth")
+plt.xlabel("Time")
+plt.ylabel("Population")
+plt.show()
+\end{lstlisting}
+
+
+\subsection{Exponential Population Growth}
+
+\begin{lstlisting}[caption={Exponential Growth Model}]
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Time values
+t = np.linspace(0, 20, 200)
+
+# Parameters
+P0 = 10
+r = 0.3
+
+# Exponential model
+P = P0 * np.exp(r*t)
+
+plt.plot(t, P)
+plt.title("Exponential Population Growth")
+plt.xlabel("Time")
+plt.ylabel("Population")
+plt.show()
+\end{lstlisting}
+
+
+\subsection{Logistic Population Growth}
+
+\begin{lstlisting}[caption={Logistic Growth Model}]
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Time values
+t = np.linspace(0, 20, 200)
+
+# Parameters
+P0 = 10
+r = 0.3
+K = 100
+
+# Logistic model
+P = K / (1 + ((K - P0)/P0) * np.exp(-r*t))
+
+plt.plot(t, P)
+plt.title("Logistic Population Growth")
+plt.xlabel("Time")
+plt.ylabel("Population")
+plt.show()
+\end{lstlisting}
 \newpage
 \section{References}
 \textit{“Linear Population Growth.”} Pearson, 2025,
@@ -112,5 +200,5 @@ In this project I studied three types of population growth models: exponential, 
 \textit{“Linear Growth.”} LibreTexts,
 \url{https://math.libretexts.org/Bookshelves/Applied_Mathematics/Book%3A_College_Mathematics_for_Everyday_Life_(Inigo_et_al)/04%3A_Growth/4.01%3A_Linear_Growth#:~:text=Linear%20growth%20has%20the%20characteristic,the%20same%20unit%20of%20time.}.
 \section{Declaration of AI Usage}\
-Artificial intelligence (ChatGPT) was used to aid in this research paper specifically for brainstorming ideas. I thoroughly reviewed and done extra research to make sure the information I received was reliable.
+Artificial intelligence (ChatGPT) was used to aid in this research paper specifically for brainstorming ideas. I also used it to help with my SageMath graphs and inserting them into Overleaf. I thoroughly reviewed and done extra research to make sure the information I received was reliable.
 \end{document}
