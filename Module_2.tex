@@ -31,11 +31,11 @@
 \maketitle
 \newpage
 \begin{abstract}
-    This report analyzes three population growth models: exponential, linear, and logistic growth. It explains in depth each differential equation, explicit equation, and corresponding graph. The advantages and limitations are also discussed for each model, specifically focusing on if they are more applicable for short- or long-term biological modeling.
+    This report analyzes three population growth models: exponential, linear, and logistic growth. It explains clearly each differential equation, explicit equation, and corresponding graph. The advantages and limitations are also discussed for each model, specifically focusing on if they are more applicable for short- or long-term biological modeling.
 \end{abstract}
 \section{Introduction}
 At some point in most science courses, you will come across population growth models, and to understand them and their importance, it all starts with the calculus behind each equation. In applied mathematics, the change of quantities over time, like population, is represented by differential equations. Population growth models are also extremely important in different branches of biology. For example, expressing the rate of change in animal populations can help expand research done on how those animals evolve under different environmental conditions and resource availability (Khan Academy).
-There have been multiple models proposed to describe the rate of change. Examples include the exponential growth model, which assumes the current population size is proportional to the rate of growth, the linear growth model is the second which has a constant rate of increase over time. Lastly, there is also the logistic population growth model, which has an added extra component. This model incorporates the carrying capacity, which is the maximum population size an environment can support. This project will explore exponential, linear, and logistic growth models, aiming to clarify when each model is used and what the advantages and limitations of each model are.
+There have been multiple models proposed to describe the rate of change. Examples include the exponential growth model, which assumes the current population size is proportional to the rate of growth. The second is the linear growth model, which has a constant rate of increase over time. Lastly, there is also the logistic population growth model, which has an additional component. This model incorporates the carrying capacity, which is the maximum population size an environment can support. This project will explore exponential, linear, and logistic growth models, aiming to clarify when each model is used and what the advantages and limitations of each model are.
 \section{Methods}
 
 \subsection{Exponential Growth}
@@ -45,15 +45,15 @@ Exponential growth is used when a population increases faster as more time passe
     \centering
      \frac{\mathrm{d}N}{\mathrm{d}t} = r_{\max} N
 \end{equation}
-This differential equation describes the rate at which the population changes at any given moment. It explains how the population is changing at any given moment, but to use this model there also need to be a lot of assumptions made. 
+This differential equation describes how the rate of a population is changing at any given moment, but in order for this model to work, there need to be a lot of assumptions made. 
 
 Exponential growth assumes that there are unlimited resources, no environmental constraints, and a constant per capita growth rate, as well as no immigration or emigration. Although these assumptions make the math easier, they reduce the realism in any long-term results. The r{max} represents the maximum possible growth rate a population can achieve when resources are unlimited (Khan Academy). 
 \begin{equation}
 N(t) = N_0 e^{r_{\max} t}
 \end{equation}
-This is the explicit solution that shows that population size grows proportionally to an exponential function of time. This is how you would find the actual population size at time t.
+This is the explicit solution which shows that population size grows proportionally to an exponential function of time. This is how you would find the actual population size at any time t.
 \subsection{Linear Growth}
-A linear growth model ensures what exponential cannot; it offers predictability and stability (Statsig). Unlike exponential growth, where the rate of increase depends on the population size, linear growth assumes that the population grows by the same amount in each unit of time (LibreTexts).
+A linear growth model assumes a constant rate of change, offering mathematical simplicity and predictability (Statsig). Unlike exponential growth, where the rate of increase depends on the population size, linear growth assumes that the population grows by the same amount in each unit of time (LibreTexts).
 \begin{equation}
 \frac{\mathrm{d}N}{\mathrm{d}t} = c
 \end{equation}
@@ -61,11 +61,11 @@ The differential equation for this growth model is very straightforward. It simp
 \begin{equation}
 N(t) = N_0 + ct,
 \end{equation}
-In this equation the N$_0$ represents the initial population size and it can be used find the population size at any time, t. 
+In this equation, N$_0$ represents the initial population size, and can be used to find the population size at any time, t. 
 
 Linear growth increases the population and remains steady and easily predicted, unlike exponential growth that accelerates over time. 
 \subsection{Logistic Growth}
-Logistic growth is the final model where the growth slows as the population size increases. It is the only model that uses the environment and makes sure to account for the limitations faced. When sources become scarce, competition increases between the populations, and the growth rate begins to decrease. This increase-then-decrease growth pattern produces an S-shaped curve when graphed over time (Khan Academy).
+Logistic growth is the final model, where the growth slows as the population size increases. It is the only model that uses the environment and ensures that the limitations faced are taken into account. When resources become scarce, competition increases within the population, and the growth rate begins to decrease. This increase-then-decrease growth pattern produces an S-shaped curve when graphed over time (Khan Academy).
 \begin{equation}
 \frac{\mathrm{d}N}{\mathrm{d}t} = rN\left(1 - \frac{N}{K}\right)
 \end{equation}
@@ -75,39 +75,40 @@ When solved, this differential equation gives the explicit equation:
 N(t) = \frac{K}{1 + Ae^{-rt}},
 \end{equation}
 Here A is a constant determined by the initial population size. This formula can be used to find the population size at any time t, which will gradually approach the carrying capacity, K.
+\\
 \textbf{Carrying Capacity:}
 Carrying capacity is unique to the logistic growth model and is very beneficial to get a more accurate read on populations. Any type of resource important to a species and their survival can act as a limit. Limiting any highly valuable resources like food or water can lead to competition and a decline in the population of the species (Khan Academy).
 
 \section{Results}
 \subsection{Exponential Growth Graph}
-\begin{figure}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{sage Exponential.png}
+    \includegraphics[width=0.45\linewidth]{sage Exponential.png}
     \caption{Exponential Growth}
 \end{figure}
-As shown, there is accelerating growth leading to a strong J-shaped curve in the population. This is due to the growth rate being proportional to the current population size. We can also observe from this graph that long-term behavior, or as t goes to infinity, the exponential solution grows without bound, which is very unrealistic in nature.
+As shown, there is an accelerating growth pattern leading to a strong J-shaped curve in the population. This is due to the growth rate being proportional to the current population size. We can also observe from this graph that long-term behavior, or as t goes to infinity, the exponential solution grows without bound, which is very unrealistic in nature.
 \subsubsection{Advantages and Limitations of Exponential Growth Models}
-Exponential growth models do have their limitations, but they are useful when analyzing growth and decay models like fast-growing animal populations, the spread of diseases, and growing bacteria (openstax). It's great for providing reasonably accurate approximations over short time intervals or in environments where resources are only temporarily abundant. 
+Exponential growth models do have their limitations, but they are useful when analyzing growth and decay models like fast-growing animal populations, the spread of diseases, and growing bacteria (OpenStax). It's great for providing reasonably accurate approximations over short time intervals or in environments where resources are only temporarily abundant. 
 \subsection{Linear Growth Graph}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{sage linear.png}
+    \includegraphics[width=0.45\linewidth]{sage linear.png}
     \caption{Linear Growth}
 \end{figure}
 As shown in figure 2, similarly to exponential growth, as t goes to infinity the linear solution grows without bound when c is greater than 0. Since the model does not take into account all the environmental limitations, it's most appropriate in short-term approximations.
 \subsubsection{Advantages and Limitations of Linear Growth Models}
-This model is most useful for short-term projections and initial growth analysis due to its strong assumptions (Pearson). It assumes that the population increases  by the same unit of time regardless of how large the population is. This model also says that outside conditions affecting growth remain constant. This can only be accurate under controlled laboratory experiments, not in the wild like animal populations.
+This model is most useful for short-term projects and initial growth analysis due to its strong assumptions (Pearson). It assumes that the population increases  by the same unit of time regardless of how large the population is. This model also says that outside conditions affecting growth remain constant. This can only be accurate under controlled laboratory experiments, not in the wild like animal populations.
 \subsection{Logistic Growth Graph}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{Logistic Sage.png}
+    \includegraphics[width=0.45\linewidth]{Logistic Sage.png}
     \caption{Logistic Growth}
 \end{figure}
 As t approaches infinity, the logistic solution approaches K. This means that the population eventually stabilizes instead of growing exponentially. This makes the model more appropriate for long-term biological studies.
 \subsubsection{Advantages and Limitations of Logistic Growth}
-The biggest advantage for the logistic model is the incorporation of a carrying capacity K. This is the only model that acknowledges any environmental resources, which makes it much more reasonable and realistic for long-term biological populations (Khan Academy). There are still assumptions on the model; for example, it assumes that carrying capacity is constant and does not account for migration, seasonal changes, etc.
+The biggest advantage for the logistic model is the incorporation of a carrying capacity K. This is the only model out of the three that acknowledges any environmental limitations, which makes it much more reasonable and realistic for long-term biological populations (Khan Academy). Even though this model includes the carrying capacity, there are still limitations; for example, the model does not account for migration, seasonal changes, and more.
 \section{Conclusion}
-In this project, I studied three types of population growth models: exponential, linear, and logistic. Each of these models was compared by their equations, advantages and limitations, and long-term behavior. The exponential model assumes growth proportional to the current population, the linear model assumes a constant rate of increase and the logistic model incorporates a carrying capacity. The linear and exponential models are useful for short-term predictions because resource limitations may not yet significantly affect population growth. Results for the logistic model show that the growth slows, leading to stabilization in a population. This means that the logistic model is the most realistic out of the three for long-term biological populations. Understanding these models is essential when applying mathematical models to real-world studies.
+In this project, I studied three types of population growth models: exponential, linear, and logistic. Each of these models was compared by their equations, advantages and limitations, and long-term behavior. The exponential model assumes growth proportional to the current population, the linear model assumes a constant rate of increase and the logistic model incorporates a carrying capacity. The linear and exponential models are useful for short-term predictions because resource limitations may have less effect on the rate of population growth. Results for the logistic model show that the growth slows, leading to stabilization in a population. This means that the logistic model is the most realistic out of the three for long-term biological populations. Understanding these models is essential when applying mathematical models to real-world studies.
 \newpage
 \section{References}
 \textit{“Linear Population Growth.”} Pearson, 2025,
